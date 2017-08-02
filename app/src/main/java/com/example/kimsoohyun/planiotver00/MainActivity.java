@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-       /*리스트뷰*/
 
         adapter = new menuAdapter();
         listview = (ListView)findViewById(R.id.myplantList);
