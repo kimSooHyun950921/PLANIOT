@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">PLANIOTver.0.0</string>
     <string name="title_activity_menu">MenuActivity</string>
+
+    <style name="SplashTeme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name ="android:windowBackground">@drawable/splash</item>
+    </style>
 </resources>
