@@ -53,7 +53,7 @@
                 />
             <ImageView
                 android:id="@+id/fullstatusImage"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_width="60dp"
                 android:layout_height="80dp"
                 android:textSize="20dp"
@@ -146,9 +146,9 @@
                     android:textSize="20dp"/>
                 <ImageView
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:textSize="20dp"
                     android:src="@drawable/waterdrop" />
                 </LinearLayout>
@@ -179,32 +179,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/soilInfoImageLinearLayout"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="토양"
-                    android:textSize="20dp"/>
+                    android:orientation="vertical"
+                    android:layout_gravity="left">
+                    <TextView
+                        android:id="@+id/soilInfo"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="토양"
+
+                        android:textSize="20dp"/>
+
+                    <ImageView
+                        android:id="@+id/soilInfoImage"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:textSize="20dp"
+                        android:src="@drawable/soil"
+                        />
+                </LinearLayout>
+
+
                 <EditText
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:text="나쁨"
+                    android:text="비료가 필요해요"
                     android:enabled="false" />
             </LinearLayout>
 
 
-            <EditText
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="비료가필요해요"
-                android:enabled="false" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
