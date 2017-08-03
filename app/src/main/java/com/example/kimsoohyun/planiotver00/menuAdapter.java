@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Created by kimsoohyun on 2017-08-01.
  */
 public class menuAdapter extends BaseAdapter{
-    private ArrayList<MenuItem> menuList = new ArrayList<>();
+    private ArrayList<ItemMenu> menuList = new ArrayList<>();
     public menuAdapter(){
 
     }
@@ -58,7 +58,7 @@ public class menuAdapter extends BaseAdapter{
 
     }
     public void addItem(Drawable icon,String name,String date) {
-        MenuItem item = new MenuItem(icon,name,date);
+        ItemMenu item = new ItemMenu(icon,name,date);
         menuList.add(item);
     }
 

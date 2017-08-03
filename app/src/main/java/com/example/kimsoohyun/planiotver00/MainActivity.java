@@ -1,10 +1,15 @@
 package com.example.kimsoohyun.planiotver00;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,10 +48,40 @@ public class MainActivity extends AppCompatActivity {
             });
             ad.show();
         }
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                //ItemMenu item = (ItemMenu)adapterView.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this,MenuActivity.class);
+                startActivity(intent);
+            }
+        });
       // adapter.addItem(ContextCompat.getDrawable(this,R.drawable.images),"달심이","2014년 4월 3일");
-       //adapter.addItem(ContextCompat.getDrawable(this,R.drawable.plant2),"초록이","2017년 8월 3일");
 
 
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.actionbar_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id==R.id.newPost) {
+            adapter.addItem(ContextCompat.getDrawable(this,R.drawable.images),"달심이","2014년 4월 3일");
+
+            listview.setAdapter(adapter);
+        }
+            return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+
+
 }

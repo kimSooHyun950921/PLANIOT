@@ -5,12 +5,12 @@ import android.graphics.drawable.Drawable;
 /**
  * Created by kimsoohyun on 2017-08-01.
  */
-public class MenuItem {
+public class ItemMenu {
     Drawable myPlantImage;
     String name;
     String date;
 
-    public MenuItem(Drawable myPlantImage, String name, String date) {
+    public ItemMenu(Drawable myPlantImage, String name, String date) {
         this.myPlantImage = myPlantImage;
         this.name = name;
         this.date = date;
