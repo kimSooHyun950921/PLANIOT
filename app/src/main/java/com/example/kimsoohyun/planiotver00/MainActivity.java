@@ -22,10 +22,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-
+        Intent intent =getIntent();
+        String plantName;
         adapter = new menuAdapter();
-        listview = (ListView)findViewById(R.id.myplantList);
+        listview = (ListView) findViewById(R.id.myplantList);
+        int plantImage;
 
+
+        if(intent.hasExtra("PLANTNAME")==true) {
+            plantName = intent.getExtras().getString("PLANTNAME");
+            plantImage = intent.getExtras().getInt("PLANTIMAGE");
+            /*db에 저장한것을 adapter에 넣어주기*/
+            adapter.addItem(ContextCompat.getDrawable(MainActivity.this, plantImage), plantName, "2017년 8월 3일");
+            listview.setAdapter(adapter);
+        }
 
         if(adapter.isEmpty()){
             AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this);
@@ -34,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
             ad.setPositiveButton("네",new DialogInterface.OnClickListener(){
                 @Override
                 public void onClick(DialogInterface dialog, int i) {
-
-                    adapter.addItem(ContextCompat.getDrawable(MainActivity.this,R.drawable.plant2),"초록이","2017년 8월 3일");
+                    Intent intent = new Intent(MainActivity.this,Dic.class);
+                    startActivity(intent);
+                    /*db에저장한것을 불러와 adapter에 넣어주어야한다*/
+                   /* adapter.addItem(ContextCompat.getDrawable(MainActivity.this,R.drawable.tulip),"튤립","2017년 8월 3일");
                     listview.setAdapter(adapter);
-                    dialog.dismiss();
+                    dialog.dismiss();*/
                 }
             });
             ad.setNegativeButton("아니요",new DialogInterface.OnClickListener(){
@@ -48,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             });
             ad.show();
         }
+
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             @Override
@@ -72,9 +85,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id==R.id.newPost) {
-            adapter.addItem(ContextCompat.getDrawable(this,R.drawable.images),"달심이","2014년 4월 3일");
+            Intent intent = new Intent(MainActivity.this,Dic.class);
+            startActivity(intent);
 
-            listview.setAdapter(adapter);
+
+           
         }
             return super.onOptionsItemSelected(item);
     }
