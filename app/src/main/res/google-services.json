@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "365093333105",
+    "project_id": "firebase-planiot"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365093333105:android:29df5528b5901f9a",
+        "android_client_info": {
+          "package_name": "com.example.kimsoohyun.planiotver00"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365093333105-cgigjb8j0qeg333ipo2ammmnhok46pa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2OxxgRRj3fBG1NVYKkyBPWDgIsdZHwOI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
