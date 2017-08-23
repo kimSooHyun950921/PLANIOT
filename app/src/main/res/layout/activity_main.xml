@@ -109,18 +109,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
+                        android:layout_marginTop="10dp"
                         android:gravity="right"
 
                         android:layout_marginRight="10dp"
                     android:textAlignment="center"
                     android:transitionGroup="true"
                     android:baselineAligned="true">
-                    <Button
-                        android:id="@+id/sun_movement_button"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:text ="이동"/>
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="암막커튼치기"/>
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/sun_block_curtain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"/>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

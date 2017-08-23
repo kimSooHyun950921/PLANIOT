@@ -3,6 +3,6 @@
     <string name="title_activity_menu">MenuActivity</string>
 
     <style name="SplashTeme" parent="@android:style/Theme.Light.NoTitleBar">
-        <item name ="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 </resources>
