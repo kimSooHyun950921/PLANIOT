@@ -8,6 +8,7 @@ import android.os.Bundle;
  * Created by kimsoohyun on 2017-08-03.
  */
 public class splashActivity extends Activity {
+
     @Override
     protected  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -19,4 +20,8 @@ public class splashActivity extends Activity {
         startActivity(new Intent(this,MainActivity.class));
         finish();
     }
+
+
+
+
 }
